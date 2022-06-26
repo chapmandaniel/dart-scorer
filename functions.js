@@ -10,9 +10,9 @@ function updateInterface(message = ""){
     // console.log(match.players[0].name + ":" + match.players[0].score + " " + match.players[1].name + ":" + match.players[1].score);
 }
 
-function isGameOver(){
+function isMatchOver(){
   if(match.players[0].legs === match.legsToWin || match.players[1].legs === match.legsToWin){
-    console.log("game over");
+    console.log("The Match is Over...");
     console.log(match.players[0].name + ":" + match.players[0].legs + " " + match.players[1].name + ":" + match.players[1].legs);
     return true;
   }
