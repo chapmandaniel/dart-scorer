@@ -27,6 +27,7 @@ body {
 
     #app-container{
         background-color: darkolivegreen;
+        max-width: 481px;
     }
 }
 
@@ -34,12 +35,14 @@ body {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     #app-container {
         background-color: darkorange;
+        max-width: 641px;
     }
 }
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     #app-container{
-        background-color: red;
+        background-color: darkorchid;
+       max-width: 961px;
     }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
