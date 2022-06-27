@@ -114,7 +114,7 @@ body {
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     #app-container{
         background-color: darkorchid;
-       max-width: 750px;
+       max-width: 961px;
     }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
