@@ -6,7 +6,7 @@ body {
 }
 
 #app-container{
-    background-color: grey;
+    background-color: #2e2e2e;
     width: 100%;
     height: 97vh;
     max-width: 750px;
@@ -19,9 +19,9 @@ body {
 #header{
     width: 100%;
     height: 18vh;
-    background-color: royalblue;
     display: flex;
     flex-direction: row;
+    background-color: #2e2e2e;
 }
 
 .player-column{
@@ -34,20 +34,47 @@ body {
     height: 20vh;
 }
 
+.player-name{
+    font-size: 30px;
+    background-color: #363636;
+    color: #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.active{
+    background-color: darkolivegreen;
+    color: #f2f2f2;
+}
+
+.player-score{
+    font-size: 90px;
+}
+
+.turn-score{
+    padding-top: 15px;
+    font-size: 70px;
+}
+
+.leg-counter{
+    color: grey;
+}
+
 .scoreboard-column{
     width: 30%;
     text-align: center;
     padding-bottom: 0px;
-    background-color: pink;
-    color: #f2f2f2;
+    color: grey;
     font-size: 30px;
     height: 20vh;
+    border-right: #232323 solid 8px;
+    border-left: #232323 solid 8px;
+    background-color: #2e2e2e;
 }
 
 #footer{
     width: 100%;
     height: 18vh;
-    background-color: green;
     color: #f2f2f2;
     font-size: 30px;
     text-align: center;
@@ -59,28 +86,47 @@ body {
     display: flex;
     flex-direction: row;
     height: 61vh;
+    border-bottom: #232323 solid 8px;
+    border-top: #232323 solid 8px;
 }
 
 .turn-log{
-    width: 25%;
+    width: 20%;
     height: 61vh;
     text-align: center;
-    background-color: brown;
+    background-color: #262626;
+}
+
+.turn{
+    font-size: 30px;
+    color: gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #414141;
+    margin-bottom: 8px;
 }
 
 #button-console{
-    width: 50%;
+    width: 60%;
     height: 61vh;
-    background-color: cadetblue;
     display: flex;
     flex-direction: column;
+    border-right: #232323 solid 8px;
+    border-left: #232323 solid 8px;
 }
 
 #finish-darts{
     width: 100%;
     height: 11vh;
     text-align: center;
-    background-color: deepskyblue;
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: cadetblue;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 #calculator{
@@ -90,26 +136,53 @@ body {
     width: 100%;
     height: 36vh;
     text-align: center;
-    background-color: hotpink;
+    background-color: #232323;
+    border-top: #232323 solid 8px;
+    border-bottom: #232323 solid 8px;
 }
 
 .calculator-button{
     display: flex;
-    width: 33.3333%;
+    width: 32.8%;
     height: 9vh;
-    background-color: darkgoldenrod;
+    background-color: #262626;
     align-items: center;
     justify-content: center;
     font-size: 30px;
     color: #f2f2f2;
+    text-transform: uppercase;
+    border: #232323 solid 1px;
+}
+
+.calculator-button:hover{
+    background-color: dimgray;
+    color: #232323;
 }
 
 
 #quick-pick{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 15vh;
     text-align: center;
-    background-color: lightblue;
+    background-color: #2e2e2e;
+}
+
+.quick-pick-button{
+    display: flex;
+    width: 33.3333%;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: gray;
+}
+
+.quick-pick-button:hover{
+    background-color: dimgray;
+    color: #232323;
 }
 
 
@@ -131,13 +204,13 @@ body {
 
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
     #app-container{
-        background-color: blue;
+
     }
 }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
     #app-container{
-        background-color: darkolivegreen;
+
         max-width: 481px;
     }
 }
@@ -145,26 +218,24 @@ body {
 @media (min-width:641px) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     #app-container {
-        background-color: darkorange;
+
         max-width: 641px;
     }
 }
 
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     #app-container{
-        background-color: darkorchid;
+
        max-width: 961px;
     }
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
     #app-container{
-        background-color: yellow;
         max-width: 750px;
     }
 }
 @media (min-width:1281px) { /* hi-res laptops and desktops */
     #app-container{
-        background-color: teal;
         max-width: 750px;
     }
 }

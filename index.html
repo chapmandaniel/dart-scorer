@@ -12,14 +12,35 @@
 <div id="app-container">
 
     <div id="header" class="no-padding">
-        <div id="player1-column" class="player-column"></div>
-        <div id="scoreboard-column" class="scoreboard-column"></div>
-        <div id="player2-column" class="player-column"></div>
+        <div id="player1-column" class="player-column">
+            <div id="player1-name" class="player-name active">Player 1</div>
+            <div id="player1-score" class="player-score">206</div>
+        </div>
+        <div id="scoreboard-column" class="scoreboard-column">
+            <div id="leg-counter" class="leg-counter player-name">
+                <span id="p1legs">0</span> -
+                <span id="p2legs">0</span>
+            </div>
+            <div id="turn-score" class="turn-score">65</div>
+        </div>
+        <div id="player2-column" class="player-column">
+            <div id="player2-name" class="player-name">Player 2</div>
+            <div id="player2-score" class="player-score">161</div>
+        </div>
     </div>
     <div id="numpad" class="no-padding">
-        <div id="player1-turn-log" class="turn-log"></div>
+        <div id="player1-turn-log" class="turn-log">
+            <div class="turn">100</div>
+            <div class="turn">40</div>
+            <div class="turn">60</div>
+            <div class="turn">95</div>
+        </div>
         <div id="button-console">
-            <div id="finish-darts"></div>
+            <div id="finish-darts">
+                <div id="finish-1" class="finish-dart">1 Dart</div>
+                <div id="finish-2" class="finish-dart">2 Darts</div>
+                <div id="finish-3" class="finish-dart">3 Darts</div>
+            </div>
             <div id="calculator">
                     <div class="calculator-button" id="calculator-button-one">1</div>
                     <div class="calculator-button" id="calculator-button-two">2</div>
@@ -30,14 +51,30 @@
                     <div class="calculator-button" id="calculator-button-seven">7</div>
                     <div class="calculator-button" id="calculator-button-eight">8</div>
                     <div class="calculator-button" id="calculator-button-nine">9</div>
-                    <div class="calculator-button" id="calculator-button-bust">Bust</div>
+                    <div class="calculator-button" id="calculator-button-enter" style="color: cadetblue;">Enter</div>
                     <div class="calculator-button" id="calculator-button-zero">0</div>
-                    <div class="calculator-button" id="calculator-button-enter">Enter</div>
+                    <div class="calculator-button" id="calculator-button-undo" style="color: cadetblue;">Undo</div>
             </div>
-            <div id="quick-pick"></div>
+            <div id="quick-pick">
+                <div class="quick-pick-button" id="quick-pick-26">26</div>
+                <div class="quick-pick-button" id="quick-pick-45">45</div>
+                <div class="quick-pick-button" id="quick-pick-60">60</div>
+                <div class="quick-pick-button" id="quick-pick-85">85</div>
+                <div class="quick-pick-button" id="quick-pick-95">95</div>
+                <div class="quick-pick-button" id="quick-pick-100">100</div>
+                <div class="quick-pick-button" id="quick-pick-120">120</div>
+                <div class="quick-pick-button" id="quick-pick-140">140</div>
+                <div class="quick-pick-button" id="quick-pick-180">180</div>
+            </div>
 
         </div>
-        <div id="player2-turn-log" class="turn-log"></div>
+        <div id="player2-turn-log" class="turn-log">
+            <div class="turn">80</div>
+            <div class="turn">40</div>
+            <div class="turn">100</div>
+            <div class="turn">60</div>
+            <div class="turn">60</div>
+        </div>
     </div>
     <div id="footer" class="no-padding"></div>
 
