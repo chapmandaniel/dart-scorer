@@ -8,7 +8,7 @@ body {
 #app-container{
     background-color: grey;
     width: 100%;
-    height: 98vh;
+    height: 97vh;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +18,7 @@ body {
 
 #header{
     width: 100%;
-    height: 20vh;
+    height: 18vh;
     background-color: royalblue;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@ body {
 
 #footer{
     width: 100%;
-    height: 20vh;
+    height: 18vh;
     background-color: green;
     color: #f2f2f2;
     font-size: 30px;
@@ -58,19 +58,19 @@ body {
 #numpad{
     display: flex;
     flex-direction: row;
-    height: 60vh;
+    height: 61vh;
 }
 
 .turn-log{
     width: 25%;
-    height: 60vh;
+    height: 61vh;
     text-align: center;
     background-color: brown;
 }
 
 #button-console{
     width: 50%;
-    height: 60vh;
+    height: 61vh;
     background-color: cadetblue;
 }
 
