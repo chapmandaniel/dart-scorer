@@ -72,7 +72,46 @@ body {
     width: 50%;
     height: 61vh;
     background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
 }
+
+#finish-darts{
+    width: 100%;
+    height: 11vh;
+    text-align: center;
+    background-color: deepskyblue;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 36vh;
+    text-align: center;
+    background-color: hotpink;
+}
+
+.calculator-button{
+    display: flex;
+    width: 33.3333%;
+    height: 9vh;
+    background-color: darkgoldenrod;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #f2f2f2;
+}
+
+
+#quick-pick{
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    background-color: lightblue;
+}
+
 
 .no-padding{
     padding: 0px;
