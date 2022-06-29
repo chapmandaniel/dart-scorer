@@ -9,11 +9,11 @@
 <div id="output" style="display: none;"></div>
 
 
-<div id="app-container">
+<div id="app-container" class="app-container hide">
 
     <div id="header" class="no-padding">
         <div id="player1-column" class="player-column">
-            <div id="player1-name" class="player-name active">Player 1</div>
+            <div id="player1-name" class="player-name">Player 1</div>
             <div id="player1-score" class="player-score">206</div>
         </div>
         <div id="scoreboard-column" class="scoreboard-column">
@@ -21,7 +21,7 @@
                 <span id="p1legs">0</span> -
                 <span id="p2legs">0</span>
             </div>
-            <div id="turn-score" class="turn-score">65</div>
+            <div id="turn-score" class="turn-score"></div>
         </div>
         <div id="player2-column" class="player-column">
             <div id="player2-name" class="player-name">Player 2</div>
@@ -30,16 +30,13 @@
     </div>
     <div id="numpad" class="no-padding">
         <div id="player1-turn-log" class="turn-log">
-            <div class="turn">100</div>
-            <div class="turn">40</div>
-            <div class="turn">60</div>
-            <div class="turn">95</div>
+
         </div>
         <div id="button-console">
             <div id="finish-darts">
-                <div id="finish-1" class="finish-dart">1 Dart</div>
-                <div id="finish-2" class="finish-dart">2 Darts</div>
-                <div id="finish-3" class="finish-dart">3 Darts</div>
+                <button id="finish-darts-1" class="finish-btn">One Dart</button>
+                <button id="finish-darts-2" class="finish-btn">Two Darts</button>
+                <button id="finish-darts-3" class="finish-btn">Three Darts</button>
             </div>
             <div id="calculator">
                     <div class="calculator-button" id="calculator-button-one">1</div>
@@ -51,9 +48,9 @@
                     <div class="calculator-button" id="calculator-button-seven">7</div>
                     <div class="calculator-button" id="calculator-button-eight">8</div>
                     <div class="calculator-button" id="calculator-button-nine">9</div>
-                    <div class="calculator-button" id="calculator-button-enter" style="color: cadetblue;">Enter</div>
+                    <div class="calculator-button" id="calculator-button-enter" style="color: cadetblue;">enter</div>
                     <div class="calculator-button" id="calculator-button-zero">0</div>
-                    <div class="calculator-button" id="calculator-button-undo" style="color: cadetblue;">Undo</div>
+                    <div class="calculator-button" id="calculator-button-undo" style="color: cadetblue;">undo</div>
             </div>
             <div id="quick-pick">
                 <div class="quick-pick-button" id="quick-pick-26">26</div>
@@ -69,19 +66,29 @@
 
         </div>
         <div id="player2-turn-log" class="turn-log">
-            <div class="turn">80</div>
-            <div class="turn">40</div>
-            <div class="turn">100</div>
-            <div class="turn">60</div>
-            <div class="turn">60</div>
+
         </div>
     </div>
     <div id="footer" class="no-padding"></div>
 
 </div>
 
+<div id="registration" class="registration-container">
+
+    <div id="player-names-container" class="reg-content-container">
+            <div id="player1-name-label">Player A</div>
+            <input type="text" id="player1-name-input" placeholder="enter name" size="12" maxlength="12">
+            <div id="player2-name-label">Player B</div>
+            <input type="text" id="player2-name-input" placeholder="enter name" size="12" maxlength="12">
+            <div id="race-to-label">Race To Games</div>
+            <input type="text" id="race-to-input-field" placeholder="enter games" size="12" maxlength="2"><br>
+            <button id="start-match-button">Start Match</button>
+    </div>
+</div>
+
 <script src="classes.js"></script>
 <script src="functions.js"></script>
+<script src="interface.js"></script>
 <script src="main.js"></script>
 
 </body>

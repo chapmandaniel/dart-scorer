@@ -3,6 +3,10 @@ class Player{
         this.name = name;
         this.score = null;
         this.legs = 0;
+        this.visits = [];
+        this.matchLog = [];
+        this.legAverage = 0;
+        this.matchAverage = 0;
     }
 
     toString(){
@@ -13,7 +17,7 @@ class Player{
 class Visit{
     constructor(score, darts=3){
         this.visitID = match.legVisitID;
-        this.score = score;
+        this.score = parseInt(score);
         this.darts = darts;
     }
 }
@@ -45,13 +49,14 @@ class Match{
     }
 
 
-    throwDarts(score){  // method that performs a players turn
+    throwDarts(score, darts=3){  // method that performs a players turn
 
         if(!isMatchOver()){
             // set timeout to make a delay between each throw
-            let visit = new Visit(score); // create a new visit
-            this.atTheOche.score -= score; // subtract the score from the current player
-            this.legVisits.push(visit); // add the visit to the legVisits array
+            let visit = new Visit(score, darts); // create a new visit
+            // this.atTheOche.score -= score; // subtract the score from the current player
+            this.atTheOche.visits.push(visit); // add the visit to the legVisits array
+            this.calculatePlayerScore();
             this.alternateTurns(); // alternate turns
             updateInterface(); // update the interface with current data
             this.isLegOver(); // check if the leg is over
@@ -87,8 +92,11 @@ class Match{
 
         if(over){
             this.legsPlayed++; // increment the number of legs played
-            this.matchVisits.push(this.legVisits.slice()) // add the legVisits array to the matchVisits array
-            isMatchOver() ? null : this.startNewLeg(`Leg over...  \n${this.players[0].name}: ${this.players[0].legs} | ${this.players[1].name}: ${this.players[1].legs}`); // check if the match is over, if true, start a new leg and send score message
+            this.players[0].matchLog.push(this.players[0].visits.slice()); // add the visits array to the matchLog array
+            this.players[1].matchLog.push(this.players[1].visits.slice());
+            this.players[0].visits = []; // reset the visits array
+            this.players[1].visits = [];
+            isMatchOver() ? endMatch() : this.startNewLeg(`Leg over...  \n${this.players[0].name}: ${this.players[0].legs} | ${this.players[1].name}: ${this.players[1].legs}`); // check if the match is over, if true, start a new leg and send score message
         }
     }
 
@@ -100,9 +108,29 @@ class Match{
         updateInterface(message);  // update the interface with current data
     }
 
-    printScore(){
-        console.log(this.players[0].name + ":" + this.players[0].legs + " " + this.players[1].name + ":" + this.players[1].legs);
+    calculatePlayerScore(){
+        let currentPlayer = this.atTheOche;                  // set the current player
+        currentPlayer.score = match.scoreToWin;              // set the current player's score to the original score
+        currentPlayer.visits.forEach(function(visit){    // for each visit in the legVisits array subtract the visit's score from the current player's score
+            currentPlayer.score -= visit.score;
+        });
     }
 
-}
+    calculateAverages() {
+        console.log("Calculating averages...");
 
+        for(let i = 0; i < 2; i++){
+            match.players[i].legAverage = function(){
+                let sum = 0;
+                let count = 0;
+                match.players[i].visits.forEach(function(visit){
+                     sum += visit.score;
+                     count += visit.darts;
+                });
+                return ((sum / count) * 3).toFixed(2);
+            }();
+        }
+        (Number.isNaN(match.playerA.legAverage)) ? console.log(0) : console.log(match.playerA.legAverage) ;
+        (Number.isNaN(match.playerB.legAverage)) ? console.log(0) : console.log(match.playerB.legAverage) ;
+    }
+}
