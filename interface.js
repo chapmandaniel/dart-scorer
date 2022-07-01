@@ -30,6 +30,10 @@ const finishButton1 = document.querySelector('#finish-darts-1');
 const finishButton2 = document.querySelector('#finish-darts-2');
 const finishButton3 = document.querySelector('#finish-darts-3');
 
+const nmDivContainer = document.querySelector('#nm-full-container');
+const nmButton = document.querySelector('#nm-submit');
+const nmToggleBtn = document.querySelector('#nm-toggle-btn');
+
 // add event listener for all items of class "quick-pick-button"
 const quickPickButtons = document.querySelectorAll('.quick-pick-button');
 
@@ -69,10 +73,18 @@ finishButtons.forEach(function(button) {
 });
 
 
-const nmButton = document.querySelector('#nm-submit');
+
 
 nmButton.addEventListener("click", function(e) {
     match.throwDarts(parseInt(nmButton.innerHTML));
     console.log("nm button clicked");
-    nmModal.style.display = "none";
+    nmDivContainer.classList.toggle('nm-hide');
+    document.querySelector('#app-container').classList.toggle('hide');
+
+});
+
+
+nmToggleBtn.addEventListener("click", function(e) {
+    nmDivContainer.classList.toggle('nm-hide');
+    document.querySelector('#app-container').classList.toggle('hide');
 });
