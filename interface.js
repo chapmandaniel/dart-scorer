@@ -67,3 +67,12 @@ finishButtons.forEach(function(button) {
     });
 
 });
+
+
+const nmButton = document.querySelector('#nm-submit');
+
+nmButton.addEventListener("click", function(e) {
+    match.throwDarts(parseInt(nmButton.innerHTML));
+    console.log("nm button clicked");
+    nmModal.style.display = "none";
+});
