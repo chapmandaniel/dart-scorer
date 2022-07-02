@@ -15,6 +15,7 @@ document.querySelector('#start-match-button').addEventListener('click', function
     match.legsToWin = (raceTo === "") ? 1 : parseInt(raceTo);
 
     match.startNewLeg();
+    openFullscreen();
 });
 
 const player1NameDiv = document.querySelector('#player1-name');

@@ -51,3 +51,8 @@
 .nm-hide{
     display: none;
 }
+
+#nm-toggle-btn img{
+    width: 120px;
+    height: auto;
+}
