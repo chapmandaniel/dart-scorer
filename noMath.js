@@ -40,10 +40,6 @@ function noMathScore(hitScore) {
 }
 
 
-
-
-
-
 function hitHandler(e) {
     let mapScore;
 

@@ -81,6 +81,9 @@ nmButton.addEventListener("click", function(e) {
     console.log("nm button clicked");
     nmDivContainer.classList.toggle('nm-hide');
     document.querySelector('#app-container').classList.toggle('hide');
+    document.querySelector('#nm-score1').innerHTML = "--";
+    document.querySelector('#nm-score2').innerHTML = "--";
+    document.querySelector('#nm-score3').innerHTML = "--";
 
 });
 
